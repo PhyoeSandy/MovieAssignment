@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color">
+
+            <FrameLayout
+                android:id="@+id/flToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivBackgroundMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/movie_item_height"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:background="@drawable/circle_button"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/margin_xxlarge"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:layout_alignTop="@id/btnBack"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:src="@drawable/ic_baseline_search_24"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvYear"
+                        android:layout_width="75dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/movie_item_width"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingBottom="@dimen/margin_smaller"
+                        android:paddingStart="@dimen/margin_medium"
+                        style="@style/WhiteText"
+                        android:background="@drawable/yello_button_background"
+                        android:text="2016"/>
+
+                    <RatingBar
+                        android:id="@+id/rbVote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tvYear"
+                        android:rating="3.8"
+                        android:layout_marginStart="70dp"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:progressTint="@color/rating_color"
+                        android:layout_alignTop="@id/tvYear"/>
+
+                    <TextView
+                        android:id="@+id/tvVote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/WhiteText"
+                        android:layout_alignStart="@id/rbVote"
+                        android:layout_below="@id/rbVote"
+                        android:text="38376 VOTES" />
+
+                    <TextView
+                        android:id="@+id/tvAvgVote"
+                        style="@style/WhiteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_3"
+                        android:text="975"
+                        android:layout_toEndOf="@id/tvVote"
+                        android:layout_alignBottom="@id/tvVote"
+                        android:layout_marginEnd="@dimen/margin_smaller"
+                        android:textSize="@dimen/text_heading_2x" />
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvMovieName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/WhiteText"
+                android:layout_below="@id/flToolbar"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:text="Fantastic Beats and Where to Find Them"/>
+
+            <TextView
+                android:id="@+id/tvShowTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                style="@style/WhiteText"
+                android:layout_below="@id/tvMovieName"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                android:text="2 hr 13 min"/>
+
+            <RelativeLayout
+                android:id="@+id/rlStoryLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvShowTime">
+
+                <TextView
+                    android:id="@+id/tvStoryLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    style="@style/GrayText"
+                    android:text="STORYLINE"/>
+
+                <TextView
+                    android:id="@+id/tvStoryLines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvStoryLine"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:textColor="@android:color/white"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="@string/storyline"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPlayTrailer"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:drawableLeft="@drawable/ic_baseline_play_circle_outline_24"
+                    android:text="@string/play_trailer"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/rate_movie_btn_background"
+                    android:layout_below="@id/tvStoryLines"
+                    android:textColor="@android:color/white"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRateMovie"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:drawableLeft="@drawable/ic_baseline_star_24"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/rate_movie"
+                    android:layout_toRightOf="@id/btnPlayTrailer"
+                    android:layout_below="@id/tvStoryLines"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/white_stroke_background"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlActors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlStoryLine"
+                android:background="@color/show_time_background_color">
+
+                <TextView
+                    android:id="@+id/tvActors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/actors"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    style="@style/GrayText"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvActorsInDetails"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/rv_height"/>
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAboutFilm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlActors"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    style="@style/GrayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_medium_2"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:text="@string/about_flim"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:text="@string/original_title"
+                    style="@style/GrayText"
+                    app:layout_constraintStart_toStartOf="@+id/tvAbout"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAbout" />
+
+                <TextView
+                    android:id="@+id/tvOriginalTitle"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:text="@string/movie_title"
+                    app:layout_constraintStart_toEndOf="@+id/lblTitle"
+                    app:layout_constraintTop_toTopOf="@+id/lblTitle" />
+
+                <TextView
+                    android:id="@+id/lblType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:text="@string/type"
+                    style="@style/GrayText"
+                    app:layout_constraintStart_toStartOf="@id/lblTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:textColor="@android:color/white"
+                    android:text="@string/family_adventure"
+                    app:layout_constraintStart_toEndOf="@+id/lblType"
+                    app:layout_constraintTop_toTopOf="@+id/lblType" />
+
+                <TextView
+                    android:id="@+id/lblProduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:text="@string/production"
+                    style="@style/GrayText"
+                    app:layout_constraintStart_toStartOf="@+id/lblType"
+                    app:layout_constraintTop_toBottomOf="@+id/lblType" />
+
+
+                <TextView
+                    android:id="@+id/tvProduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:layout_marginStart="44dp"
+                    android:text="@string/united_kingdom_usa"
+                    app:layout_constraintStart_toEndOf="@+id/lblProduction"
+                    app:layout_constraintTop_toTopOf="@+id/lblProduction" />
+
+                <TextView
+                    android:id="@+id/lblPremiere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/premiere"
+                    style="@style/GrayText"
+                    app:layout_constraintStart_toStartOf="@+id/lblProduction"
+                    app:layout_constraintTop_toBottomOf="@+id/lblProduction" />
+
+
+                <TextView
+                    android:id="@+id/tvPremiere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="56dp"
+                    android:textColor="@android:color/white"
+                    android:text="@string/_8_november_2016_world"
+                    app:layout_constraintStart_toEndOf="@+id/lblPremiere"
+                    app:layout_constraintTop_toTopOf="@+id/lblPremiere" />
+
+                <TextView
+                    android:id="@+id/lblDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/description"
+                    style="@style/GrayText"
+                    app:layout_constraintStart_toStartOf="@+id/lblPremiere"
+                    app:layout_constraintTop_toBottomOf="@+id/lblPremiere" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@android:color/white"
+                    android:maxLines="5"
+                    android:text="@string/the_film_begins_in_1926_the_film_begins_in_1926_the_film_begins_in_1926_the_film_begins_in_1926_the_film_begins_in_1926_the_film_begins_in_1926_the_film_begins_in_1926"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/lblDesc"
+                    app:layout_constraintTop_toTopOf="@+id/lblDesc" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/clAboutFilm">
+
+                <TextView
+                    android:id="@+id/tvCreators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/creators"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_alignBaseline="@id/tvMoreCreators"
+                    style="@style/GrayText"/>
+
+                <TextView
+                    android:id="@+id/tvMoreCreators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:text="@string/more_creators"
+                    style="@style/WhiteText"/>
+
+                <View
+                    android:layout_width="@dimen/more_line_width"
+                    android:layout_height="@dimen/margin_small"
+                    android:layout_alignStart="@id/tvMoreCreators"
+                    android:layout_below="@id/tvMoreCreators"
+                    android:background="@android:color/white"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCreatorsInDetails"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/rv_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

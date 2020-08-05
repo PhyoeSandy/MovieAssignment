@@ -1,8 +1,14 @@
 package com.padcmyanmar.padcx.movieassignment.mvp.views
 
+import com.padcmyanmar.padcx.movieassignment.data.vos.MovieVO
+import com.padcmyanmar.padcx.movieassignment.data.vos.UserVO
+
 /**
  * Created by Phyoe Sandy Soe Tun
  * on 8/3/2020.
  */
-class DetailsView {
+interface DetailsView : BaseView {
+    fun displayDetailsData(movie: MovieVO)
+    fun displayActorsList(actors: List<UserVO>)
+    fun displayCreatorsList(creators: List<UserVO>)
 }

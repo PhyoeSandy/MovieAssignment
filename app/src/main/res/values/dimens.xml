@@ -1,0 +1,51 @@
+<resources>
+	<dimen name="fab_margin">16dp</dimen>
+
+	<!-- Generic with ratio -->
+	<dimen name="margin_small">4dp</dimen>
+	<dimen name="margin_card_medium">6dp</dimen>
+	<dimen name="margin_medium">8dp</dimen>
+	<dimen name="margin_medium_2">16dp</dimen>
+	<dimen name="margin_card_medium_2">12dp</dimen>
+	<dimen name="margin_medium_3">20dp</dimen>
+	<dimen name="margin_large">24dp</dimen>
+	<dimen name="margin_xlarge">32dp</dimen>
+	<dimen name="margin_xxlarge">48dp</dimen>
+
+	<dimen name="margin_small_n">-4dp</dimen>
+	<dimen name="margin_card_medium_n">-6dp</dimen>
+	<dimen name="margin_medium_n">-8dp</dimen>
+	<dimen name="margin_card_medium_2_n">-12dp</dimen>
+	<dimen name="margin_medium_2_n">-16dp</dimen>
+	<dimen name="margin_medium_3_n">-18dp</dimen>
+	<dimen name="margin_large_n">-24dp</dimen>
+	<dimen name="margin_xlarge_n">-32dp</dimen>
+
+	<dimen name="text_smaller">10sp</dimen>
+	<dimen name="text_small">12sp</dimen>
+	<dimen name="text_regular">14sp</dimen>
+	<dimen name="text_regular_2x">16sp</dimen>
+	<dimen name="text_regular_3x">20sp</dimen>
+	<dimen name="text_heading_1x">24sp</dimen>
+	<dimen name="text_heading_2x">32sp</dimen>
+	<dimen name="text_big">40sp</dimen>
+	<dimen name="text_big_2x">60sp</dimen>
+	<dimen name="text_big_3x">80sp</dimen>
+
+	<!--App Specific-->
+	<dimen name="margin_smaller">2dp</dimen>
+	<dimen name="movie_item_height">280dp</dimen>
+	<dimen name="movie_item_width">200dp</dimen>
+    <dimen name="line_width">100dp</dimen>
+	<dimen name="show_time_card_height">220dp</dimen>
+	<dimen name="actor_item_height">230dp</dimen>
+	<dimen name="movie_full_height">400dp</dimen>
+    <dimen name="more_line_width">190dp</dimen>
+	<dimen name="chip_width">80dp</dimen>
+	<dimen name="button_width">150dp</dimen>
+    <dimen name="showcase_height">300dp</dimen>
+	<dimen name="name_width">480dp</dimen>
+	<dimen name="showcases_width">380dp</dimen>
+	<dimen name="review_height">350dp</dimen>
+	<dimen name="rv_height">50dp</dimen>
+</resources>

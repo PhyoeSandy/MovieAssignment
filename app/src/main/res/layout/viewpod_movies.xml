@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padcmyanmar.padcx.movieassignment.views.viewpods.MovieViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/movie_full_height">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMovie"
+        android:layout_width="@dimen/movie_item_width"
+        android:layout_height="@dimen/movie_item_height"
+        app:cardCornerRadius="@dimen/margin_small"
+        app:cardElevation="@dimen/margin_small">
+
+        <ImageView
+            android:id="@+id/ivMovie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sunshine" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="@dimen/movie_item_width"
+        android:layout_height="wrap_content"
+        style="@style/WhiteText"
+        android:layout_alignStart="@id/cardMovie"
+        android:layout_below="@id/cardMovie"
+        android:text="@string/movie_title"/>
+
+    <TextView
+        android:id="@+id/tvVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMovieTitle"
+        style="@style/WhiteText"
+        android:layout_alignStart="@id/cardMovie"
+        android:text="@string/vote_count"/>
+
+    <RatingBar
+        android:id="@+id/rbVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="3.5"
+        android:progressTint="@color/rating_color"
+        android:layout_toRightOf="@id/tvVote"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_below="@id/tvMovieTitle"
+        style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+</com.padcmyanmar.padcx.movieassignment.views.viewpods.MovieViewPod>
