@@ -38,7 +38,7 @@ object MockMoviesModelImpl : MoviesModel {
         return getDummyVideos().toObservable().map { VideoListResponse() }
     }
 
-    override fun getMoviesListByGenreId(genreId: String): Observable<MoviesListResponse> {
+    override fun getMoviesListByGenreId(genreId: Int): Observable<MoviesListResponse> {
         return getDummyMovies().toObservable().map { MoviesListResponse() }
     }
 
