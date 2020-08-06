@@ -7,7 +7,7 @@
     <include
         android:id="@+id/vpUser"
         layout="@layout/viewpod_users"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:layout_marginEnd="@dimen/margin_medium_3"/>
 

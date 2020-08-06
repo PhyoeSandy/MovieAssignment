@@ -48,4 +48,5 @@
 	<dimen name="showcases_width">380dp</dimen>
 	<dimen name="review_height">350dp</dimen>
 	<dimen name="rv_height">50dp</dimen>
+    <dimen name="viewpager_height">450dp</dimen>
 </resources>

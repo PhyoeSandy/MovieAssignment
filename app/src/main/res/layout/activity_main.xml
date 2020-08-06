@@ -130,10 +130,39 @@
             </androidx.cardview.widget.CardView>
 
             <RelativeLayout
-                android:id="@+id/rlShowCases"
+                android:id="@+id/rlGenres"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cardShowTime"
+                android:background="@color/background_color"
+                android:layout_marginStart="@dimen/margin_medium_2">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:background="@color/background_color"
+                    android:id="@+id/tabGenre"
+                    app:tabMode="scrollable"
+                    app:tabTextColor="@android:color/darker_gray"
+                    app:tabSelectedTextColor="@android:color/white"
+                    app:tabIndicatorColor="@color/rating_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerMovie"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_below="@id/tabGenre"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:layout_height="@dimen/viewpager_height" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlShowCases"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlGenres"
                 android:background="@color/show_time_background_color">
 
                 <TextView
@@ -174,36 +203,6 @@
                     android:layout_width="@dimen/line_width"
                     android:layout_height="@dimen/margin_small"
                     android:background="@android:color/white"/>-->
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rlGenres"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cardShowTime"
-                android:layout_marginStart="@dimen/margin_medium_2">
-
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabGenre"
-                    app:tabMode="scrollable"
-                    app:tabTextColor="#000000"
-                    app:tabSelectedTextColor="#ff0000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </com.google.android.material.tabs.TabLayout>
-
-               <!-- <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvGenreMovie"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>-->
-
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/viewPagerMovie"
-                    android:layout_below="@id/tabGenre"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp" />
 
             </RelativeLayout>
 

@@ -216,6 +216,7 @@
                     android:layout_height="@dimen/margin_medium_2"
                     android:layout_marginStart="@dimen/margin_medium_2"
                     android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
                     android:text="@string/about_flim"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -227,7 +228,7 @@
                     android:id="@+id/lblTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_3"
                     android:text="@string/original_title"
                     style="@style/GrayText"
                     app:layout_constraintStart_toStartOf="@+id/tvAbout"
@@ -321,7 +322,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_3"
                     android:lineSpacingMultiplier="1.2"
                     android:textColor="@android:color/white"
                     android:maxLines="5"
@@ -336,7 +337,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/clAboutFilm">
+                android:layout_below="@id/clAboutFilm"
+                android:background="@color/chip_background">
 
                 <TextView
                     android:id="@+id/tvCreators"
