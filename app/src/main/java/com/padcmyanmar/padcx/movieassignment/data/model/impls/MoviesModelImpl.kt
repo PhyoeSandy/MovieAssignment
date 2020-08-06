@@ -116,8 +116,10 @@ object MoviesModelImpl : MoviesModel, BaseModel() {
             .observeOn(AndroidSchedulers.mainThread())
     }
 
-    override fun getMoviesListByGenreId(genreId: String): Observable<MoviesListResponse> {
+    override fun getMoviesListByGenreId(genreId: Int): Observable<MoviesListResponse> {
         return mMoviesApi.getMoviesListByGenre(PARAM_API_VALUE, genreId)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
     }
 
     override fun getTopRatedMovies(): LiveData<List<MovieVO>> {

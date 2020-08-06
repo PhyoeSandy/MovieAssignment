@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity(), MainView {
         mDynamicPagerAdapter = DynamicPagerAdapter(this)
         viewPagerMovie.adapter = mDynamicPagerAdapter
         tabGenre.getTabAt(0)?.select()
+        viewPagerMovie.isUserInputEnabled = false;
     }
 
     private fun setupRecyclerView() {

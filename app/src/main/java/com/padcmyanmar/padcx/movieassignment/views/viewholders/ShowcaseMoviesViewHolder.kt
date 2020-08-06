@@ -3,12 +3,9 @@ package com.padcmyanmar.padcx.movieassignment.views.viewholders
 import android.view.View
 import com.bumptech.glide.Glide
 import com.padcmyanmar.padcx.movieassignment.data.vos.MovieVO
-import com.padcmyanmar.padcx.movieassignment.delegates.MovieItemDelegate
 import com.padcmyanmar.padcx.movieassignment.delegates.VideoItemDelegate
 import com.padcmyanmar.padcx.movieassignment.utils.IMAGE_URL
 import kotlinx.android.synthetic.main.item_showcases.view.*
-import kotlinx.android.synthetic.main.item_top_rated_movies.view.*
-import kotlinx.android.synthetic.main.viewpod_movies.view.*
 
 /**
  * Created by Phyoe Sandy Soe Tun
@@ -17,7 +14,7 @@ import kotlinx.android.synthetic.main.viewpod_movies.view.*
 class ShowcaseMoviesViewHolder(private val delegate: VideoItemDelegate, itemView: View) : AbstractBaseViewHolder(itemView) {
 
     init {
-        itemView.ivShowcase.setOnClickListener {
+        itemView.btnPlay.setOnClickListener {
             mData?.let {
                 delegate.onTapVideo(it.id)
             }

@@ -31,7 +31,7 @@ interface MoviesApi {
     fun getVideoKey(@Path("MOVIE_ID") movieID: Int, @Query(PARAM_API_KEY) apiKey: String) : Observable<VideoListResponse>
 
     @GET(DISCOVER_MOVIE)
-    fun getMoviesListByGenre(@Query(PARAM_API_KEY) apiKey: String, @Query(GENRE_KEY) key:String) : Observable<MoviesListResponse>
+    fun getMoviesListByGenre(@Query(PARAM_API_KEY) apiKey: String, @Query(GENRE_KEY) key:Int) : Observable<MoviesListResponse>
 
     @GET("$MOVIE_DETAIL/{MOVIE_ID}/credits")
     fun getActorsAndCreditorsById(@Path("MOVIE_ID") movieID: Int, @Query(PARAM_API_KEY) apiKey: String) : Observable<ActorsAndCreatorsListResponse>

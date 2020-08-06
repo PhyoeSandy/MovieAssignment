@@ -74,6 +74,9 @@ class DetailsActivity : AppCompatActivity(), DetailsView {
 
     override fun displayDetailsData(movie: MovieVO) {
         tvMovieName.text = movie.movieName
+        tvDescription.text = movie.description
+        tvOriginalTitle.text = movie.movieName
+
         Glide.with(this)
             .load(IMAGE_URL + movie.movieImage)
             .into(ivBackgroundMovie)

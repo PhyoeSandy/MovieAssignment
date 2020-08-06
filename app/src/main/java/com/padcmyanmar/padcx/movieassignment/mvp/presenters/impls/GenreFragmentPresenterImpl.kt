@@ -16,7 +16,7 @@ class GenreFragmentPresenterImpl : GenreFragmentPresenter, AbstractBasePresenter
     private var mMoviesModel = MoviesModelImpl
 
     override fun onUiReady(lifecycleOwner: LifecycleOwner, genresId: Int) {
-        mMoviesModel.getMoviesListByGenreId(genresId.toString())
+        mMoviesModel.getMoviesListByGenreId(genresId)
             .map { it.data?.toList() ?: listOf()}
             .subscribe {
                 mView?.displayGenreFragment(it)
@@ -24,5 +24,6 @@ class GenreFragmentPresenterImpl : GenreFragmentPresenter, AbstractBasePresenter
     }
 
     override fun onTapMovie(movieId: Int) {
+        mView?.navigateToMovieDetail(movieId)
     }
 }

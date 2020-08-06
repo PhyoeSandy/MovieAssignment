@@ -31,7 +31,7 @@ interface MoviesModel {
 
     fun getVideoById(movieId: Int) : Observable<VideoListResponse>
 
-    fun getMoviesListByGenreId(genreId: String) : Observable<MoviesListResponse>
+    fun getMoviesListByGenreId(genreId: Int) : Observable<MoviesListResponse>
 
     fun getTopRatedMovies() : LiveData<List<MovieVO>>
 

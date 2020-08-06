@@ -12,7 +12,7 @@ import com.padcmyanmar.padcx.movieassignment.views.viewholders.ShowcaseMoviesVie
  * Created by Phyoe Sandy Soe Tun
  * on 8/3/2020.
  */
-class ShowcasesMoviesAdapter(val delegate: VideoItemDelegate) : BaseRecyclerAdapter<ShowcaseMoviesViewHolder, MovieVO>() {
+class ShowcasesMoviesAdapter(private val delegate: VideoItemDelegate) : BaseRecyclerAdapter<ShowcaseMoviesViewHolder, MovieVO>() {
 
     private val mDelegate = delegate
 
