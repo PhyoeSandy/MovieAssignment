@@ -18,7 +18,7 @@ class SliderMoviesViewHolder(private val delegate: VideoItemDelegate, itemView: 
     private lateinit var mData : MovieVO
 
     init {
-        itemView.ivTopRatedMovie.setOnClickListener {
+        itemView.btnPlay.setOnClickListener {
             mData?.let {
                 delegate.onTapVideo(it.id)
             }
