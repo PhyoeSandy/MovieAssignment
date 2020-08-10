@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), MainView {
 
     private lateinit var mPresenter: MainPresenter
 
-    private lateinit var mTopRatedMoviesAdapter: TopRatedMoviesAdapter
+    private lateinit var mSliderAdapter: SliderAdapter
     private lateinit var mPopularMoviesAdapter: PopularMoviesAdapter
     private lateinit var mShowcasesMoviesAdapter: ShowcasesMoviesAdapter
     private lateinit var mActorAdapter: ActorAdapter
@@ -48,11 +48,13 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     private fun setupRecyclerView() {
-        mTopRatedMoviesAdapter = TopRatedMoviesAdapter(mPresenter)
-        with(rvTopReatedMovie) {
+
+        /*with(rvTopReatedMovie) {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = mTopRatedMoviesAdapter
-        }
+            adapter = mSliderAdapter
+        }*/
+        mSliderAdapter = SliderAdapter(mPresenter)
+        imageSlider.setSliderAdapter(mSliderAdapter)
 
         mPopularMoviesAdapter = PopularMoviesAdapter(mPresenter)
         with(rvPopularMovies) {
@@ -79,7 +81,7 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun displayTopRatedMoviesList(movies: List<MovieVO>) {
-        mTopRatedMoviesAdapter.setNewData(movies.toMutableList())
+        mSliderAdapter.addItems(movies.toMutableList())
     }
 
     override fun displayPopularMoviesList(movies: List<MovieVO>) {
