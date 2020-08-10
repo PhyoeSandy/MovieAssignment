@@ -1,5 +1,8 @@
 package com.padcmyanmar.padcx.movieassignment.utils
 
+import com.padcmyanmar.padcx.movieassignment.BuildConfig
+
+
 /**
  * Created by Phyoe Sandy Soe Tun
  * on 8/3/2020.
@@ -7,7 +10,7 @@ package com.padcmyanmar.padcx.movieassignment.utils
 
 const val BASE_URL = "https://api.themoviedb.org/3/"
 const val PARAM_API_KEY = "api_key"
-const val PARAM_API_VALUE = "9b39c3f0169f5f9e9e50926dc56847af"
+const val PARAM_API_VALUE = BuildConfig.PARAM_API_VALUE
 
 
 const val IMAGE_URL = "https://image.tmdb.org/t/p/original"
