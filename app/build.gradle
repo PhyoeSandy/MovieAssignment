@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.padcmyanmar.padcx.movieassignment"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -60,7 +60,6 @@ dependencies {
 
     // Glide
     implementation rootProject.ext.libraries.glide
-    //annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     //RxKotlin
     implementation rootProject.ext.libraries.rxKotlin
@@ -68,7 +67,6 @@ dependencies {
 
     // Image Slider
     implementation rootProject.ext.libraries.imageSlider
-
 
     testImplementation rootProject.ext.libraries.Junit
     testImplementation rootProject.ext.libraries.Ktx
@@ -87,5 +85,8 @@ dependencies {
     androidTestImplementation rootProject.ext.libraries.adtExpressoContrib
     androidTestImplementation rootProject.ext.libraries.adtMockitoAndroid
     androidTestImplementation rootProject.ext.libraries.adtJunit
+
+
+    implementation project(":shared")
 
 }

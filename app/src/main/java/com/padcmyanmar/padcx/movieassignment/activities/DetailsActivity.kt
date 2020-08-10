@@ -3,7 +3,6 @@ package com.padcmyanmar.padcx.movieassignment.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -16,14 +15,14 @@ import com.padcmyanmar.padcx.movieassignment.mvp.presenters.DetailsPresenter
 import com.padcmyanmar.padcx.movieassignment.mvp.presenters.impls.DetailsPresenterImpl
 import com.padcmyanmar.padcx.movieassignment.mvp.views.DetailsView
 import com.padcmyanmar.padcx.movieassignment.utils.IMAGE_URL
+import com.padcmyanmar.padcx.shared.activities.BaseActivity
 import kotlinx.android.synthetic.main.activity_details.*
-import kotlinx.android.synthetic.main.activity_details.btnBack
 
 /**
  * Created by Phyoe Sandy Soe Tun
  * on 8/3/2020.
  */
-class DetailsActivity : AppCompatActivity(), DetailsView {
+class DetailsActivity : BaseActivity(), DetailsView {
 
     companion object {
         const val IE_MOVIE_ID = "IE_MOVIE_ID"

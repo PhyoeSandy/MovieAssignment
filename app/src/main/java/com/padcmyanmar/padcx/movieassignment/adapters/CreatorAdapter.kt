@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import com.padcmyanmar.padcx.movieassignment.R
 import com.padcmyanmar.padcx.movieassignment.data.vos.UserVO
 import com.padcmyanmar.padcx.movieassignment.views.viewholders.UserViewHolder
+import com.padcmyanmar.padcx.shared.adapters.BaseRecyclerAdapter
 
 /**
  * Created by Phyoe Sandy Soe Tun

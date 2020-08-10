@@ -6,6 +6,7 @@ import com.padcmyanmar.padcx.movieassignment.R
 import com.padcmyanmar.padcx.movieassignment.data.vos.MovieVO
 import com.padcmyanmar.padcx.movieassignment.delegates.MovieItemDelegate
 import com.padcmyanmar.padcx.movieassignment.views.viewholders.SmallMoviesViewHolder
+import com.padcmyanmar.padcx.shared.adapters.BaseRecyclerAdapter
 
 /**
  * Created by Phyoe Sandy Soe Tun

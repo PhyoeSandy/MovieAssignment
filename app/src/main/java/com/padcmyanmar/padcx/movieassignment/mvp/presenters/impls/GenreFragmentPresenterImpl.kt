@@ -1,11 +1,10 @@
 package com.padcmyanmar.padcx.movieassignment.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Transformations.map
 import com.padcmyanmar.padcx.movieassignment.data.model.impls.MoviesModelImpl
-import com.padcmyanmar.padcx.movieassignment.mvp.presenters.AbstractBasePresenter
 import com.padcmyanmar.padcx.movieassignment.mvp.presenters.GenreFragmentPresenter
 import com.padcmyanmar.padcx.movieassignment.mvp.views.GenreFragmentView
+import com.padcmyanmar.padcx.shared.mvp.presenters.AbstractBasePresenter
 
 /**
  * Created by Phyoe Sandy Soe Tun

@@ -1,7 +1,7 @@
-package com.padcmyanmar.padcx.movieassignment.adapters
+package com.padcmyanmar.padcx.shared.adapters
 
 import androidx.recyclerview.widget.RecyclerView
-import com.padcmyanmar.padcx.movieassignment.views.viewholders.BaseViewHolder
+import com.padcmyanmar.padcx.shared.views.viewholders.BaseViewHolder
 
 abstract class BaseRecyclerAdapter<T : BaseViewHolder<W>,W> : RecyclerView.Adapter<T>() {
 

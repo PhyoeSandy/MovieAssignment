@@ -3,11 +3,8 @@ package com.padcmyanmar.padcx.movieassignment.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.padcmyanmar.padcx.movieassignment.R
 import com.padcmyanmar.padcx.movieassignment.adapters.*
@@ -17,9 +14,10 @@ import com.padcmyanmar.padcx.movieassignment.data.vos.UserVO
 import com.padcmyanmar.padcx.movieassignment.mvp.presenters.MainPresenter
 import com.padcmyanmar.padcx.movieassignment.mvp.presenters.impls.MainPresenterImpl
 import com.padcmyanmar.padcx.movieassignment.mvp.views.MainView
+import com.padcmyanmar.padcx.shared.activities.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), MainView {
+class MainActivity : BaseActivity(), MainView {
 
     private lateinit var mPresenter: MainPresenter
 

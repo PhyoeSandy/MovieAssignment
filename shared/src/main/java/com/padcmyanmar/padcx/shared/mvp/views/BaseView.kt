@@ -1,4 +1,4 @@
-package com.padcmyanmar.padcx.movieassignment.mvp.views
+package com.padcmyanmar.padcx.shared.mvp.views
 
 /**
  * Created by Phyoe Sandy Soe Tun

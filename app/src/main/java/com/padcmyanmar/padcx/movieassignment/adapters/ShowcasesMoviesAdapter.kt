@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.padcmyanmar.padcx.movieassignment.R
 import com.padcmyanmar.padcx.movieassignment.data.vos.MovieVO
-import com.padcmyanmar.padcx.movieassignment.delegates.MovieItemDelegate
 import com.padcmyanmar.padcx.movieassignment.delegates.VideoItemDelegate
 import com.padcmyanmar.padcx.movieassignment.views.viewholders.ShowcaseMoviesViewHolder
+import com.padcmyanmar.padcx.shared.adapters.BaseRecyclerAdapter
 
 /**
  * Created by Phyoe Sandy Soe Tun

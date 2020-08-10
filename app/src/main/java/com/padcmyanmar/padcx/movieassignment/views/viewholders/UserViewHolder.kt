@@ -4,6 +4,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.padcmyanmar.padcx.movieassignment.data.vos.UserVO
 import com.padcmyanmar.padcx.movieassignment.utils.IMAGE_URL
+import com.padcmyanmar.padcx.shared.views.viewholders.BaseViewHolder
 import kotlinx.android.synthetic.main.viewpod_users.view.*
 
 /**

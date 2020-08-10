@@ -4,9 +4,9 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import com.padcmyanmar.padcx.movieassignment.data.model.MoviesModel
 import com.padcmyanmar.padcx.movieassignment.data.model.impls.MoviesModelImpl
-import com.padcmyanmar.padcx.movieassignment.mvp.presenters.AbstractBasePresenter
 import com.padcmyanmar.padcx.movieassignment.mvp.presenters.MainPresenter
 import com.padcmyanmar.padcx.movieassignment.mvp.views.MainView
+import com.padcmyanmar.padcx.shared.mvp.presenters.AbstractBasePresenter
 
 /**
  * Created by Phyoe Sandy Soe Tun

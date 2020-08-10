@@ -21,6 +21,7 @@ ext {
     adtExpressoContribVersion = "3.2.0"
     adtMockitoAndroidVersion = "3.1.0"
     adtJunitVersion = "1.1.1"
+    recyclerViewVersion = "1.1.0"
 
 
     libraries = [
@@ -49,6 +50,7 @@ ext {
             adtTestRunner       : "androidx.test:runner:$adtTestRunnerVersion",
             adtExpressoContrib  : "com.android.support.test.espresso:espresso-contrib:$adtExpressoContribVersion",
             adtMockitoAndroid   : "org.mockito:mockito-android:$adtMockitoAndroidVersion",
-            adtJunit            : "androidx.test.ext:junit:$adtJunitVersion"
+            adtJunit            : "androidx.test.ext:junit:$adtJunitVersion",
+            recyclerView        : "androidx.recyclerview:recyclerview:$recyclerViewVersion"
     ]
 }
