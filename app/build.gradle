@@ -2,6 +2,27 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'me.moallemi.advanced-build-version'
+
+advancedVersioning {
+
+    nameOptions {
+        versionMajor 0
+        versionMinor 0
+        versionPatch 1
+    }
+
+    codeOptions {
+        versionCodeType 'AUTO_INCREMENT_ONE_STEP'
+    }
+    outputOptions {
+        renameOutput true
+        nameFormat '${appName}-v${versionName}'
+    }
+}
+
+def appVersionName = advancedVersioning.versionName
+def appVersionCode = advancedVersioning.versionCode
 
 android {
     compileSdkVersion 30
@@ -11,8 +32,8 @@ android {
         applicationId "com.padcmyanmar.padcx.movieassignment"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode appVersionCode
+        versionName appVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -23,6 +44,35 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        flavorDimensions "appModule"
+        def BASE_URL_FIELD = "BASE_URL_FIELD"
+        def BASE_DEV_URL = "\"https://dev.padcmyanmar.com/\""
+        def BASE_PROD_URL = "\"https://padcmyanmar.com/\""
+        def BASE_STAGING_URL = "\"https://staging.padcmyanmar.com/\""
+
+        dev {
+            dimension = "appModule"
+            applicationIdSuffix = ".dev"
+            manifestPlaceholders = [appName: "@string/app_name_dev"]
+            buildConfigField 'String', BASE_URL_FIELD , BASE_DEV_URL
+        }
+
+        production {
+            dimension = "appModule"
+            applicationIdSuffix = ".prod"
+            manifestPlaceholders = [appName: "@string/app_name_prod"]
+            buildConfigField 'String', BASE_URL_FIELD , BASE_PROD_URL
+        }
+
+        staging {
+            dimension = "appModule"
+            applicationIdSuffix = ".staging"
+            manifestPlaceholders = [appName: "@string/app_name_staging"]
+            buildConfigField 'String', BASE_URL_FIELD, BASE_STAGING_URL
         }
     }
 }
